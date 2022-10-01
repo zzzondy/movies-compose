@@ -18,7 +18,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.moviescompose.screens.details.DetailsScreen
 import com.moviescompose.screens.main.MainScreen
+import com.moviescompose.screens.tabs.MoviesFlowScreens
 import com.moviescompose.ui.theme.AppTheme
 import com.moviescompose.ui.theme.DarkColors
 import com.moviescompose.ui.theme.LightColors
@@ -47,7 +49,7 @@ class MainActivity : ComponentActivity() {
                         navController = navController,
                         modifier = Modifier.padding(paddingValues)
                     ) {
-                        composable("main") { MainScreen(navController = navController) }
+                        composable("main") { MainScreen() }
                     }
                 }
             }
